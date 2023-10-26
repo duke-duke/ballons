@@ -1,0 +1,470 @@
+*
+    box-sizing: border-box
+
+$color-brown-light: #BA8554
+$color-brown-dark: #A14F03
+$color-brown-lightGR: linear-gradient(90deg, #C3956A 3.65%, #A14F03 100%)
+$color-brown-darckGR: linear-gradient(90deg, #BA8554 0%, #000 100%)
+$color-gray: #777777
+$color-black: #000000
+$color-white: #FAFAFA
+
+$box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.2))
+
+
+    
+
+html
+    font-size: 62.5%
+
+body
+    font-family: "Roboto"
+    font-weight: 400
+    font-size: 1.6rem
+    letter-spacing: 0.2rem
+    line-height: 150%
+
+/*Main section.Первая секция*/        
+    
+.main-section    
+    padding: 5rem 5rem 0 5rem
+    background-color: #e6aa6a
+    
+    &__nav-container
+        background-color: #9c2b4f
+        width: 100%
+        
+    &__btn
+        width: 100%
+        text-align: center
+           
+        
+    &__title
+        margin-top: -4rem
+    &__box      
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100vh
+          
+        
+    &__background
+        position: relative
+        min-height: 85vh
+        background: linear-gradient(90deg, rgba(186, 133, 84, 0.70) 0.03%, rgba(1, 1, 1, 0.70) 99.94%),url(../img/header-image.jpg) center / cover no-repeat  
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+    &__logo
+        position: absolute
+        left: 5rem
+        top: 5rem
+        height: 7rem
+        width: 5.6rem
+.title-header
+        &__first
+            display: block
+            color: $color-white
+            font-size: 5rem
+            font-style: normal
+            font-weight: 800
+            line-height: normal
+            letter-spacing: 1rem
+            text-transform: uppercase
+            margin-bottom: -2.5rem
+            animation-name: leftRight
+            animation-duration: 0.8s
+            animation-delay: 1.5s
+            animation-timing-function: ease-out
+            backface-visibility: hidden 
+
+        &__second
+            display: block
+            color: $color-white
+            font-size: 4rem
+            font-style: normal
+            font-weight: 300
+            line-height: normal
+            letter-spacing: 0.5rem
+            padding-left: 2.7rem
+            margin-bottom: 6.5rem
+            animation-name: rightLeft
+            animation-duration: 0.8s
+            animation-delay: 1.5s
+            animation-timing-function: ease-out
+            backface-visibility: hidden
+            
+.btn
+    display: inline-block
+    position: relative
+    &:link, &:visited
+        text-transform: uppercase
+        text-decoration: none
+        font-size: 2rem
+        color: #777777
+        width: 27.7rem
+        height: 5.4rem
+        padding: 1.5rem 4.0rem
+        border-radius: 5.0rem
+        text-align: center
+        background: #FFFFFF
+        transition: all 0.5s
+    &:hover
+        transform: translateY(-4px)
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.5))
+        &::after
+            opacity: 0
+            transform: scaleX(1.3) scaleY(1.7)
+
+    &:active
+        transform: translateY(-2px)
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.2))
+    &::after
+        content: ""
+        width: 27.7rem
+        height: 5.4rem
+        background: #FFFFFF
+        border-radius: 5.0rem
+        display: inline-block 
+        position: absolute
+        top: 0rem
+        left: 0rem
+        z-index: -1
+        transition: all 0.5s       
+    &_animation
+        animation: btnBotomTop 0.5s ease-out 0.7s 
+        animation-fill-mode: backwards
+
+/*Вторая секция*/
+
+.second-section
+    padding: 0 5rem 0 5rem
+    background-color: #e6aa6a
+    &__container
+        background-color: #c7ceaa
+        width: 100%
+        padding-top: 8rem
+    &__content-container
+        max-width: 1140px
+        margin: 0 auto
+    &__title
+        text-align: center
+
+        
+.title
+    font-size: 3.6rem
+    font-weight: 800
+    letter-spacing: 1rem    
+    font-style: normal
+    text-transform: uppercase
+    color: $color-white
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.70) 0.03%, rgba(1, 1, 1, 0.70) 99.94%)
+    -webkit-background-clip: text
+    background-clip: text
+    color: transparent
+    transition: all 0.4s
+    backface-visibility: hidden
+    &:hover
+        transform: skewY(2deg) skewX(15deg) scale(1.1)
+        text-shadow: 10px 14px 14px rgba($color-black, 0.25)
+.second-section
+    &__content-container
+        display: flex
+        flex-direction: row
+    &__title
+        margin-bottom: 8rem    
+.left-wrapper
+    width: 50%
+    &__title-one
+        margin-bottom: 1rem
+    &__title-two
+        margin-bottom: 1rem
+    &__text-one
+        margin-bottom: 3rem
+    &__text-two
+        margin-bottom: 5rem            
+.right-wrapper
+    width: 50%
+    &__foto-box
+        position: relative
+    
+       
+.title-h2
+    font-size: 2rem
+    letter-spacing: 0.2rem
+    text-transform: uppercase
+    font-weight: 700
+    color: $color-gray
+    
+.text
+    font-size: 1.6rem
+    letter-spacing: 0.2rem
+    line-height: 140%
+    font-weight: 400
+    color: $color-gray
+
+.btn-text
+    &:link, &:visited
+        display: inline-block
+        text-decoration: none
+        font-size: 1.6rem
+        letter-spacing: 0.2rem
+        font-weight: 500
+        color: $color-brown-light
+        padding: 1rem
+        border-bottom: 0.1rem solid  $color-brown-dark
+        transition: 0.5s all  
+    &:hover
+        background-color: $color-brown-dark
+        color: $color-white
+        box-shadow: $box-shadow
+        transform: translateY(-10px)
+    &:active
+        transform: translateY(0)
+
+.foto
+    &__element
+        width: 50%
+        box-shadow: $box-shadow
+        border-radius: 0.5rem
+        position: absolute
+        transition: all 0.5s
+        outline-offset: 1rem
+        &_f1
+            top: 16.5rem
+            left:5rem
+        &_f2
+            top: 9rem
+            right: 6rem
+        &_f3
+            top: 0rem
+            left: 3rem
+        &:hover
+            transform: scale(1.1)
+            outline: 0.8rem solid $color-gray
+            z-index: 3
+    &:hover &__element:not(:hover)
+        transform: scale(0.8) 
+
+
+/*Третья секция*/
+
+.third-section
+    padding: 0 5rem 0 5rem
+    background-color: #e6aa6a
+    &__container
+        background-color: #9c2b4f
+        width: 100%
+    &__card-box
+        background: linear-gradient(90deg, rgba(186, 133, 84, 0.70) 0.03%, rgba(1, 1, 1, 0.70) 99.94%),url(../img/julia.jpg) center / cover no-repeat
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%) 
+        padding-top: 21rem
+        padding-bottom: 21rem
+        display: flex
+        justify-content: center
+        
+    
+    &__card-element
+        margin-right: 6rem
+        &:last-child
+            margin-right: 0rem         
+
+.card-element
+    max-width: 24rem
+    background-color: rgb($color-white, 0.7)
+    border-radius: 0.4rem
+    box-shadow: $box-shadow
+    text-align: center
+    padding: 2rem
+    transition: all 0.5s 
+    &:hover
+        transform: translateY(-1.3rem) scale(1.03)
+
+    &__title
+        margin-bottom: 1.5rem
+    
+    &__icon
+        display: inline-block
+        font-size: 6.2rem
+        padding-top: 2.5rem
+        margin-bottom: 2.4rem
+        background: linear-gradient(90deg, rgba(186, 133, 84, 0.70) 0.03%, rgba(1, 1, 1, 0.70) 99.94%)
+        -webkit-background-clip: text
+        background-clip: text
+        color: transparent
+
+
+/*Четветая  секция*/
+
+.fourth-section
+    padding: 0 5rem 0 5rem
+    background-color: #e6aa6a
+    &__container
+        background-color: #9c2b4f
+        width: 100%
+        padding-top: 8rem
+    &__content-container
+        max-width: 1140rem
+        margin: 0 auto
+                
+    &__title
+        text-align: center    
+    &__card-box
+        position: relative
+        padding-top: 10rem
+        padding-bottom: 36rem
+        display: flex
+        flex-direction: row
+        padding-left: 77px
+    &__card-item
+        margin-right: 6rem
+    
+
+.img-tur
+    height: 24.5rem
+    background: $color-brown-light url(../img/card1.jpg) center / cover
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%)
+    background-blend-mode: luminosity
+.card-title
+    font-size: 2.8rem 
+    letter-spacing: 0.2rem
+    line-height: 3.36rem
+    font-weight: 300
+    text-align: right
+    margin-top: -60px
+    &__span1
+        display: inline-block
+        padding: 10px 15px 5px 15px
+        margin-bottom: 5px
+    &__span2
+        padding: 5px 15px 10px 15px
+.span-title
+    position: relative
+    background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%)
+    z-index: 1
+    
+    
+        
+
+
+    
+/*Первая картока с переворотом*/
+
+.item
+    width: 34rem
+    height: 52rem
+    transition: all 2s
+    perspective: 1500px
+    animation-timing-function: ease-out
+    backface-visibility: hidden
+    position: relative
+    &__side_front
+        background: red
+    &__side_back 
+        position: absolute
+        top: 0px
+        left: 0px
+        background: linear-gradient(120deg, rgba($color-brown-light, 0.80) 0.03%, rgba($color-brown-dark, 0.80) 99.94%)
+        transform: rotateY(180deg)
+    &:hover &__side_front
+        transform: rotateY(180deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)           
+
+/*вторая карточка с переворотом*/
+
+.item-two
+    width: 34rem
+    height: 52rem
+    transition: all 2s
+    perspective: 1500px
+    animation-timing-function: ease-out
+    backface-visibility: hidden
+    position: relative
+    &__side_front
+        background: green
+    &__side_back
+        position: absolute
+        top: 0px
+        left: 0px
+        background: linear-gradient(120deg, rgba($color-brown-light, 0.80) 0.03%, rgba($color-brown-dark, 0.80) 99.94%)
+        transform: rotateY(180deg)
+    &:hover &__side_front
+        transform: rotateY(180deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)                   
+        
+/* Третья карточка с переворотом */
+
+.item-three
+    width: 34rem
+    height: 52rem
+    transition: all 2s
+    perspective: 1500px
+    animation-timing-function: ease-out
+    backface-visibility: hidden
+    position: relative
+    &__side_front
+        background: #efdc09
+    &__side_back
+        position: absolute
+        top: 0px
+        left: 0px
+        background: linear-gradient(120deg, rgba($color-brown-light, 0.80) 0.03%, rgba($color-brown-dark, 0.80) 99.94%)
+        transform: rotateY(180deg)
+    &:hover &__side_front
+        transform: rotateY(180deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)     
+
+    
+
+
+
+        
+             
+
+
+
+
+
+
+/*Эфекты заголовка h1*/
+                
+@keyframes leftRight
+    0%
+        opacity: 0
+        transform: translateX(-100px)
+    60%
+        transform: translateX(20px)
+
+
+    100%
+        opacity: 1
+        transform: translateX(0px)   
+    
+/*Эфект второго заголовка h1 */                 
+    
+@keyframes rightLeft
+    0%
+        opacity: 0
+        transform: translateX(100px)
+    60%
+        transform: translateX(-20px)
+
+
+    100%
+        opacity: 1
+        transform: translateX(0px)       
+        
+/*Эфекты кнопки*/        
+        
+@keyframes btnBotomTop
+    0%
+        opacity: 0
+        transform: translateY(100px)
+   
+
+    100%
+        opacity: 1
+        transform: translateY(0px)       
+        

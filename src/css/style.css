@@ -1,0 +1,500 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  line-height: 150%;
+}
+
+/*Main section.Первая секция*/        
+.main-section {
+  padding: 5rem 5rem 0 5rem;
+  background-color: #e6aa6a;
+}
+.main-section__nav-container {
+  background-color: #9c2b4f;
+  width: 100%;
+}
+.main-section__btn {
+  width: 100%;
+  text-align: center;
+}
+.main-section__title {
+  margin-top: -4rem;
+}
+.main-section__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.main-section__background {
+  position: relative;
+  min-height: 85vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/header-image.jpg) center/cover no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+}
+.main-section__logo {
+  position: absolute;
+  left: 5rem;
+  top: 5rem;
+  height: 7rem;
+  width: 5.6rem;
+}
+
+.title-header__first {
+  display: block;
+  color: #FAFAFA;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  margin-bottom: -2.5rem;
+  animation-name: leftRight;
+  animation-duration: 0.8s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease-out;
+  backface-visibility: hidden;
+}
+.title-header__second {
+  display: block;
+  color: #FAFAFA;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 0.5rem;
+  padding-left: 2.7rem;
+  margin-bottom: 6.5rem;
+  animation-name: rightLeft;
+  animation-duration: 0.8s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease-out;
+  backface-visibility: hidden;
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+}
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #777777;
+  width: 27.7rem;
+  height: 5.4rem;
+  padding: 1.5rem 4rem;
+  border-radius: 5rem;
+  text-align: center;
+  background: #FFFFFF;
+  transition: all 0.5s;
+}
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.btn:hover::after {
+  opacity: 0;
+  transform: scaleX(1.3) scaleY(1.7);
+}
+.btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.btn::after {
+  content: "";
+  width: 27.7rem;
+  height: 5.4rem;
+  background: #FFFFFF;
+  border-radius: 5rem;
+  display: inline-block;
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  z-index: -1;
+  transition: all 0.5s;
+}
+.btn_animation {
+  animation: btnBotomTop 0.5s ease-out 0.7s;
+  animation-fill-mode: backwards;
+}
+
+/*Вторая секция*/
+.second-section {
+  padding: 0 5rem 0 5rem;
+  background-color: #e6aa6a;
+}
+.second-section__container {
+  background-color: #c7ceaa;
+  width: 100%;
+  padding-top: 8rem;
+}
+.second-section__content-container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.second-section__title {
+  text-align: center;
+}
+
+.title {
+  font-size: 3.6rem;
+  font-weight: 800;
+  letter-spacing: 1rem;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #FAFAFA;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.4s;
+  backface-visibility: hidden;
+}
+.title:hover {
+  transform: skewY(2deg) skewX(15deg) scale(1.1);
+  text-shadow: 10px 14px 14px rgba(0, 0, 0, 0.25);
+}
+
+.second-section__content-container {
+  display: flex;
+  flex-direction: row;
+}
+.second-section__title {
+  margin-bottom: 8rem;
+}
+
+.left-wrapper {
+  width: 50%;
+}
+.left-wrapper__title-one {
+  margin-bottom: 1rem;
+}
+.left-wrapper__title-two {
+  margin-bottom: 1rem;
+}
+.left-wrapper__text-one {
+  margin-bottom: 3rem;
+}
+.left-wrapper__text-two {
+  margin-bottom: 5rem;
+}
+
+.right-wrapper {
+  width: 50%;
+}
+.right-wrapper__foto-box {
+  position: relative;
+}
+
+.title-h2 {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #777777;
+}
+
+.text {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  line-height: 140%;
+  font-weight: 400;
+  color: #777777;
+}
+
+.btn-text:link, .btn-text:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  color: #BA8554;
+  padding: 1rem;
+  border-bottom: 0.1rem solid #A14F03;
+  transition: 0.5s all;
+}
+.btn-text:hover {
+  background-color: #A14F03;
+  color: #FAFAFA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+}
+.btn-text:active {
+  transform: translateY(0);
+}
+
+.foto__element {
+  width: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  position: absolute;
+  transition: all 0.5s;
+  outline-offset: 1rem;
+}
+.foto__element_f1 {
+  top: 16.5rem;
+  left: 5rem;
+}
+.foto__element_f2 {
+  top: 9rem;
+  right: 6rem;
+}
+.foto__element_f3 {
+  top: 0rem;
+  left: 3rem;
+}
+.foto__element:hover {
+  transform: scale(1.1);
+  outline: 0.8rem solid #777777;
+  z-index: 3;
+}
+.foto:hover .foto__element:not(:hover) {
+  transform: scale(0.8);
+}
+
+/*Третья секция*/
+.third-section {
+  padding: 0 5rem 0 5rem;
+  background-color: #e6aa6a;
+}
+.third-section__container {
+  background-color: #9c2b4f;
+  width: 100%;
+}
+.third-section__card-box {
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url(../img/julia.jpg) center/cover no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+  padding-top: 21rem;
+  padding-bottom: 21rem;
+  display: flex;
+  justify-content: center;
+}
+.third-section__card-element {
+  margin-right: 6rem;
+}
+.third-section__card-element:last-child {
+  margin-right: 0rem;
+}
+
+.card-element {
+  max-width: 24rem;
+  background-color: rgba(250, 250, 250, 0.7);
+  border-radius: 0.4rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 2rem;
+  transition: all 0.5s;
+}
+.card-element:hover {
+  transform: translateY(-1.3rem) scale(1.03);
+}
+.card-element__title {
+  margin-bottom: 1.5rem;
+}
+.card-element__icon {
+  display: inline-block;
+  font-size: 6.2rem;
+  padding-top: 2.5rem;
+  margin-bottom: 2.4rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/*Четветая  секция*/
+.fourth-section {
+  padding: 0 5rem 0 5rem;
+  background-color: #e6aa6a;
+}
+.fourth-section__container {
+  background-color: #9c2b4f;
+  width: 100%;
+  padding-top: 8rem;
+}
+.fourth-section__content-container {
+  max-width: 1140rem;
+  margin: 0 auto;
+}
+.fourth-section__title {
+  text-align: center;
+}
+.fourth-section__card-box {
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: 36rem;
+  display: flex;
+  flex-direction: row;
+  padding-left: 77px;
+}
+.fourth-section__card-item {
+  margin-right: 6rem;
+}
+
+.img-tur {
+  height: 24.5rem;
+  background: #BA8554 url(../img/card1.jpg) center/cover;
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+  background-blend-mode: luminosity;
+}
+
+.card-title {
+  font-size: 2.8rem;
+  letter-spacing: 0.2rem;
+  line-height: 3.36rem;
+  font-weight: 300;
+  text-align: right;
+  margin-top: -60px;
+}
+.card-title__span1 {
+  display: inline-block;
+  padding: 10px 15px 5px 15px;
+  margin-bottom: 5px;
+}
+.card-title__span2 {
+  padding: 5px 15px 10px 15px;
+}
+
+.span-title {
+  position: relative;
+  background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
+  z-index: 1;
+}
+
+/*Первая картока с переворотом*/
+.item {
+  width: 34rem;
+  height: 52rem;
+  transition: all 2s;
+  perspective: 1500px;
+  animation-timing-function: ease-out;
+  backface-visibility: hidden;
+  position: relative;
+}
+.item__side_front {
+  background: red;
+}
+.item__side_back {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.8) 0.03%, rgba(161, 79, 3, 0.8) 99.94%);
+  transform: rotateY(180deg);
+}
+.item:hover .item__side_front {
+  transform: rotateY(180deg);
+}
+.item:hover .item__side_back {
+  transform: rotateY(0deg);
+}
+
+/*вторая карточка с переворотом*/
+.item-two {
+  width: 34rem;
+  height: 52rem;
+  transition: all 2s;
+  perspective: 1500px;
+  animation-timing-function: ease-out;
+  backface-visibility: hidden;
+  position: relative;
+}
+.item-two__side_front {
+  background: green;
+}
+.item-two__side_back {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.8) 0.03%, rgba(161, 79, 3, 0.8) 99.94%);
+  transform: rotateY(180deg);
+}
+.item-two:hover .item-two__side_front {
+  transform: rotateY(180deg);
+}
+.item-two:hover .item-two__side_back {
+  transform: rotateY(0deg);
+}
+
+/* Третья карточка с переворотом */
+.item-three {
+  width: 34rem;
+  height: 52rem;
+  transition: all 2s;
+  perspective: 1500px;
+  animation-timing-function: ease-out;
+  backface-visibility: hidden;
+  position: relative;
+}
+.item-three__side_front {
+  background: #efdc09;
+}
+.item-three__side_back {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.8) 0.03%, rgba(161, 79, 3, 0.8) 99.94%);
+  transform: rotateY(180deg);
+}
+.item-three:hover .item-three__side_front {
+  transform: rotateY(180deg);
+}
+.item-three:hover .item-three__side_back {
+  transform: rotateY(0deg);
+}
+
+/*Эфекты заголовка h1*/
+@keyframes leftRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  60% {
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+/*Эфект второго заголовка h1 */                 
+@keyframes rightLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  60% {
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+/*Эфекты кнопки*/        
+@keyframes btnBotomTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}/*# sourceMappingURL=style.css.map */
